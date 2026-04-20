@@ -7,14 +7,14 @@ export default function Navbar() {
   return (
     <nav className="bg-amber-900 text-white shadow-md sticky top-0 z-40">
       
-      <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 py-0 flex items-center justify-between">
         
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <img
             src="/logo1.png"
             alt="Chinioti Wonders"
-            className="h-14 md:h-16 w-40 object-contain"
+            className="h-20 md:h-28 w-56 md:w-72 object-contain"
           />
         </Link>
 
