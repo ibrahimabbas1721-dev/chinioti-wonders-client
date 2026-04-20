@@ -1,0 +1,5 @@
+export const WHATSAPP_NUMBER = '923277865145' 
+export const STORE_NAME = 'Chinioti Wonders'
+export const STORE_PHONE = '+923277865145'
+export const STORE_ADDRESS = 'Chiniot, Punjab, Pakistan'
+export const STORE_HOURS = 'Sat - Thu : 9AM to 8PM'
