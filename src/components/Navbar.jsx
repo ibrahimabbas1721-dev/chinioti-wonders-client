@@ -14,7 +14,7 @@ export default function Navbar() {
           <img
             src="/logo1.png"
             alt="Chinioti Wonders"
-            className="h-20 md:h-28 w-56 md:w-72 object-contain"
+            className="h-20 md:h-28 ms-16 w-56 md:w-72 object-contain"
           />
         </Link>
 

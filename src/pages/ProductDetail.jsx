@@ -175,11 +175,11 @@ export default function ProductDetail() {
             <div>
               {product.inStock ? (
                 <span className="bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full font-medium">
-                  ✅ In Stock
+                  ✅ Available
                 </span>
               ) : (
                 <span className="bg-red-100 text-red-700 text-xs px-3 py-1 rounded-full font-medium">
-                  ❌ Out of Stock
+                  ❌ Unavailable
                 </span>
               )}
             </div>
