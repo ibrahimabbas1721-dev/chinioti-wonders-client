@@ -6,6 +6,7 @@ import CategoryCard from '../components/CategoryCard';
 import VideoCard from '../components/VideoCard';
 import { WHATSAPP_NUMBER } from '../config';
 import heroBg from '../assets/Background.jpg';
+import { FaMobileAlt, FaTree, FaTruck, FaTools, FaPhone } from 'react-icons/fa';
 
 export default function Home() {
   const [categories, setCategories] = useState([]);
@@ -90,10 +91,10 @@ export default function Home() {
       {/* ── TRUST STRIP ── */}
       <section className="bg-amber-800 text-white py-3">
         <div className="max-w-7xl mx-auto px-4 flex flex-wrap justify-center gap-8 text-sm font-medium text-center">
-          <span>🌳 100% Solid Wood</span>
-          <span>🚚 Delivery Available</span>
-          <span>🛠️ Custom Orders Welcome</span>
-          <span>📞 WhatsApp Support</span>
+          <span className="flex items-center gap-1"><FaTree /> 100% Solid Wood</span>
+          <span className="flex items-center gap-1"><FaTruck /> Delivery Available</span>
+          <span className="flex items-center gap-1"><FaTools /> Custom Orders Welcome</span>
+          <span className="flex items-center gap-1"><FaPhone /> WhatsApp Support</span>
         </div>
       </section>
 
@@ -179,11 +180,11 @@ export default function Home() {
 
       {/* ── SOCIAL MEDIA VIDEOS ── */}
       {videos.length > 0 && (
-        <section className="bg-gray-900 py-16">
+        <section className="bg-amber-800 py-16">
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex items-center justify-between mb-10">
               <div>
-                <h2 className="text-3xl font-bold text-white">📱 Watch Our Videos</h2>
+                <h2 className="text-3xl font-bold text-white flex items-center gap-2"><FaMobileAlt /> Watch Our Videos</h2>
                 <p className="text-gray-400 text-sm mt-1">
                   Follow us on social media for more content
                 </p>
@@ -223,7 +224,7 @@ export default function Home() {
             rel="noreferrer"
             className="inline-block bg-green-500 hover:bg-green-400 text-white font-semibold px-8 py-3 rounded-full transition w-fit mx-auto"
           >
-            📲 Order on WhatsApp
+            📲 Order Now!
           </a>
         </div>
       </section>

@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { getProduct } from '../services/api';
 import { WHATSAPP_NUMBER } from '../config';
 import { fullImage, mediumImage } from '../utils/cloudinary';
+import { FaSparkles, FaFire, FaClipboard, FaBottle, FaBox, FaTruck, FaTools, FaMapMarkerAlt, FaComments } from 'react-icons/fa';
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -140,13 +141,13 @@ export default function ProductDetail() {
                 {product.category?.name}
               </span>
               {product.isNewArrival && (
-                <span className="bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full font-medium">
-                  ✨ New Arrival
+                <span className="bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full font-medium flex items-center gap-1">
+                  <FaSparkles /> New Arrival
                 </span>
               )}
               {product.isBestSeller && (
-                <span className="bg-orange-100 text-orange-700 text-xs px-3 py-1 rounded-full font-medium">
-                  🔥 Best Seller
+                <span className="bg-orange-100 text-orange-700 text-xs px-3 py-1 rounded-full font-medium flex items-center gap-1">
+                  <FaFire /> Best Seller
                 </span>
               )}
             </div>
@@ -264,7 +265,7 @@ export default function ProductDetail() {
 
             {/* Delivery Box */}
             <div className="flex gap-3 bg-amber-50 border border-amber-200 rounded-xl px-4 py-3">
-              <span className="text-2xl">🚚</span>
+              <FaTruck className="text-2xl text-amber-700" />
               <div>
                 <p className="font-semibold text-amber-800 text-sm">Estimated Delivery</p>
                 <p className="text-amber-700 text-sm">
@@ -276,7 +277,7 @@ export default function ProductDetail() {
             {/* Custom Order */}
             {product.customOrderAvailable && (
               <div className="flex gap-3 bg-blue-50 border border-blue-200 rounded-xl px-4 py-3">
-                <span className="text-2xl">🛠️</span>
+                <FaTools className="text-2xl text-blue-800" />
                 <div>
                   <p className="font-semibold text-blue-800 text-sm">Custom Order Available</p>
                   <p className="text-blue-700 text-sm">
@@ -325,7 +326,7 @@ export default function ProductDetail() {
                     : 'border-transparent text-gray-400 hover:text-gray-600'
                 }`}
               >
-                {tab === 'details' ? '📋 Details' : tab === 'care' ? '🧴 Care' : '📦 Shipping'}
+                {tab === 'details' ? <><FaClipboard /> Details</> : tab === 'care' ? <><FaBottle /> Care</> : <><FaBox /> Shipping</>}
               </button>
             ))}
           </div>
@@ -383,14 +384,14 @@ export default function ProductDetail() {
           {activeTab === 'shipping' && (
             <div className="text-sm text-gray-600 flex flex-col gap-3">
               <div className="flex gap-3 items-start">
-                <span className="text-xl">🚚</span>
+                <FaTruck className="text-xl text-gray-600" />
                 <div>
                   <p className="font-semibold text-gray-700">Delivery Time</p>
                   <p>{product.deliveryTime || '7-10 business days'}</p>
                 </div>
               </div>
               <div className="flex gap-3 items-start">
-                <span className="text-xl">📍</span>
+                <FaMapMarkerAlt className="text-xl text-gray-600" />
                 <div>
                   <p className="font-semibold text-gray-700">Delivery Area</p>
                   <p>
@@ -400,7 +401,7 @@ export default function ProductDetail() {
                 </div>
               </div>
               <div className="flex gap-3 items-start">
-                <span className="text-xl">📦</span>
+                <FaBox className="text-xl text-amber-700" />
                 <div>
                   <p className="font-semibold text-gray-700">Packaging</p>
                   <p>
@@ -409,7 +410,7 @@ export default function ProductDetail() {
                 </div>
               </div>
               <div className="flex gap-3 items-start">
-                <span className="text-xl">💬</span>
+                <FaComments className="text-xl text-gray-600" />
                 <div>
                   <p className="font-semibold text-gray-700">Order Process</p>
                   <p>

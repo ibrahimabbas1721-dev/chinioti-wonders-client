@@ -2,32 +2,32 @@ import { Link } from 'react-router-dom'
 import { WHATSAPP_NUMBER } from '../config'
 import { STORE_ADDRESS } from '../config'
 import { STORE_HOURS } from '../config'
-import { FaFacebook, FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaTiktok, FaYoutube, FaTree, FaTruck, FaTools, FaComments, FaMapMarkerAlt, FaPhone, FaClock, FaHeart } from 'react-icons/fa'
 
 export default function Footer() {
   return (
     <footer className="bg-amber-950 text-amber-100">
 
       {/* ── TRUST STRIP ── */}
-      <div className="bg-gradient-to-r from-amber-900 to-amber-800 py-10">
+      <div className="bg-gradient-to-r from-amber-900 to-amber-800 py-24">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div className="flex flex-col items-center gap-3 hover:transform hover:scale-105 transition duration-300">
-            <span className="text-4xl">🌳</span>
+            <FaTree className="text-4xl text-amber-100" />
             <p className="text-sm font-bold text-white">100% Solid Wood</p>
             <p className="text-xs text-amber-200">Premium quality guaranteed</p>
           </div>
           <div className="flex flex-col items-center gap-3 hover:transform hover:scale-105 transition duration-300">
-            <span className="text-4xl">🚚</span>
+            <FaTruck className="text-4xl text-amber-100" />
             <p className="text-sm font-bold text-white">Nationwide Delivery</p>
             <p className="text-xs text-amber-200">All across Pakistan</p>
           </div>
           <div className="flex flex-col items-center gap-3 hover:transform hover:scale-105 transition duration-300">
-            <span className="text-4xl">🛠️</span>
+            <FaTools className="text-4xl text-amber-100" />
             <p className="text-sm font-bold text-white">Custom Orders</p>
             <p className="text-xs text-amber-200">Built to your specs</p>
           </div>
           <div className="flex flex-col items-center gap-3 hover:transform hover:scale-105 transition duration-300">
-            <span className="text-4xl">💬</span>
+            <FaComments className="text-4xl text-amber-100" />
             <p className="text-sm font-bold text-white">WhatsApp Support</p>
             <p className="text-xs text-amber-200">Quick response time</p>
           </div>
@@ -55,7 +55,7 @@ export default function Footer() {
             rel="noreferrer"
             className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white text-sm font-semibold px-6 py-3 rounded-lg w-full transition duration-300 shadow-lg"
           >
-            💬 Chat on WhatsApp
+            <FaComments /> Chat on WhatsApp
           </a>
         </div>
 
@@ -79,14 +79,14 @@ export default function Footer() {
 
           <ul className="flex flex-col gap-4 text-sm">
             <li className="flex gap-3 items-start">
-              <span className="text-lg">📍</span>
+              <FaMapMarkerAlt className="text-lg text-amber-100" />
               <div>
                 <p className="text-amber-100">{STORE_ADDRESS}</p>
               </div>
             </li>
 
             <li className="flex gap-3 items-start">
-              <span className="text-lg">📞</span>
+              <FaPhone className="text-lg text-amber-100" />
               <div>
                 <p className="text-amber-100">
                   <a href={`tel:+${WHATSAPP_NUMBER}`} className="hover:text-white transition">
@@ -97,7 +97,7 @@ export default function Footer() {
             </li>
 
             <li className="flex gap-3 items-start">
-              <span className="text-lg">🕐</span>
+              <FaClock className="text-lg text-amber-100" />
               <div>
                 <p className="text-amber-100">{STORE_HOURS}</p>
               </div>
@@ -165,7 +165,7 @@ export default function Footer() {
       {/* ── BOTTOM BAR ── */}
       <div className="border-t border-amber-800 bg-gradient-to-r from-amber-950 to-amber-900 py-6">
         <div className="max-w-7xl mx-auto px-4 text-center text-xs text-amber-300 font-medium">
-          © 2026 Chinioti Wonders Furniture. All rights reserved. | Handcrafted with ❤️ from Pakistan
+          © 2026 Chinioti Wonders Furniture. All rights reserved. | Handcrafted with <FaHeart className="inline text-red-500" /> from Pakistan
         </div>
       </div>
 
