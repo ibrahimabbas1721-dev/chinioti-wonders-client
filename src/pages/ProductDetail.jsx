@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { getProduct } from '../services/api';
 import { WHATSAPP_NUMBER } from '../config';
 import { fullImage, mediumImage } from '../utils/cloudinary';
-import { FaSparkles, FaFire, FaClipboard, FaBottle, FaBox, FaTruck, FaTools, FaMapMarkerAlt, FaComments } from 'react-icons/fa';
+import { FaFire, FaClipboard, FaBox, FaTruck, FaTools, FaMapMarkerAlt, FaComments, FaMagic, FaFlask } from "react-icons/fa";
 
 export default function ProductDetail() {
   const { id } = useParams();
