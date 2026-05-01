@@ -142,7 +142,7 @@ export default function ProductDetail() {
               </span>
               {product.isNewArrival && (
                 <span className="bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full font-medium flex items-center gap-1">
-                  <FaSparkles /> New Arrival
+                  <FaMagic /> New Arrival
                 </span>
               )}
               {product.isBestSeller && (
@@ -326,7 +326,7 @@ export default function ProductDetail() {
                     : 'border-transparent text-gray-400 hover:text-gray-600'
                 }`}
               >
-                {tab === 'details' ? <><FaClipboard /> Details</> : tab === 'care' ? <><FaBottle /> Care</> : <><FaBox /> Shipping</>}
+                {tab === 'details' ? <><FaClipboard /> Details</> : tab === 'care' ? <><FaFlask /> Care</> : <><FaBox /> Shipping</>}
               </button>
             ))}
           </div>
